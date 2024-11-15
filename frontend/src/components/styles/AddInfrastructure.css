@@ -1,0 +1,23 @@
+body {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../../public/1704209847534 copy.jpeg")
+    center/cover no-repeat;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #fff;
+}
+
+.add-infrastructure-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    color: #fff;
+}
+
+.add-infrastructure-container h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #d6d1d4;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px #608dc3, 0 0 20px #608dc3;
+}

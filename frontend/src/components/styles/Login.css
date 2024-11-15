@@ -1,0 +1,87 @@
+/* Set up the full-screen container */
+body {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../../public/1704209847534 copy.jpeg") center/cover no-repeat;
+    margin: 0;
+    background-attachment: fixed;
+    min-height: 100vh; /* Ensure body takes at least the full viewport height */
+    width: 100%;
+}
+
+  
+
+/* Ensure the container keeps its full height and centered alignment */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    z-index: 10;
+}
+
+/* Enlarged and more defined form container with neon effects */
+.form {
+    background-color: rgba(1, 35, 67, 0.85); /* Increased opacity for better definition */
+    padding: 3rem; /* Increased padding for larger appearance */
+    border-radius: 15px;
+    text-align: center;
+    width: 400px; /* Increased width for more space */
+    box-shadow: 0 0 30px rgba(96, 141, 195, 0.5),
+                0 0 60px rgba(96, 141, 195, 0.4),
+                0 0 90px rgba(96, 141, 195, 0.3);
+    transition: box-shadow 0.3s ease;
+    z-index: 10;
+}
+
+.form:hover {
+    box-shadow: 0 0 40px rgba(96, 141, 195, 0.7),
+                0 0 80px rgba(96, 141, 195, 0.6),
+                0 0 120px rgba(96, 141, 195, 0.5);
+}
+
+.title {
+    color: #60b3c3;
+    font-size: 2.5rem; /* Increased font size for emphasis */
+    margin-bottom: 1.5rem;
+    text-shadow: 0 0 10px #608dc3, 0 0 20px #608dc3;
+}
+
+/* Inputs styling */
+.inputContainer {
+    margin-bottom: 1.5rem; /* Increased spacing for input sections */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input {
+    width: 90%; /* Adjusted to fit larger form container */
+    padding: 1rem; /* Increased padding for better touch/click experience */
+    margin: 0;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    box-shadow: inset 0 0 8px rgba(96, 141, 195, 0.3);
+    background-color: rgba(255, 255, 255, 0.1); /* Subtle background color for input clarity */
+    color: #fff;
+}
+
+/* Button styling */
+.button {
+    width: 90%;
+    padding: 1rem;
+    background-color: #60b3c3;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 0 20px rgba(96, 141, 195, 0.5);
+    transition: box-shadow 0.3s ease;
+}
+
+.button:hover {
+    box-shadow: 0 0 35px rgba(96, 141, 195, 0.8),
+                0 0 45px rgba(96, 141, 195, 0.7);
+}

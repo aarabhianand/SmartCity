@@ -1,0 +1,238 @@
+/* frontend/src/styles.css */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+
+:root {
+    --dark-blue: #012344;
+    --neon-blue: #a86ce4;
+    --text-color: #d6d1df;
+}
+
+body {
+    margin: 0;
+    font-family: 'Quantico', sans-serif;
+    background-color: var(--dark-blue);
+    color: var(--text-color);
+    
+}
+
+.sidebar-container {
+    position: relative;
+}
+
+.sidebar {
+    background-color: transparent; /* Dark blue with slight transparency */
+    width: 300px;
+    height: 300vh;
+    padding: 20px;
+    transition: all 0.3s ease;
+    transform: translateX(-100%);
+    
+}
+
+.sidebar.active {
+    transform: translateX(0);
+}
+
+.toggle-btn {
+    background: #b9bac4;
+    color: var(--dark-blue);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 10px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.toggle-btn:hover {
+    background-color: #a86ce4; /* Slightly darker neon blue on hover */
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin: 15px 0;
+}
+
+a {
+    color:#b9bac4;
+    text-shadow: 0 0 10px #a86ce4, 0 0 20px #716796;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #a86ce4;
+}
+
+.icon {
+    margin-right: 10px;
+}
+
+.auth-container {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.auth-form {
+    max-width: 400px;
+    width: 100%;
+    padding: 20px;
+    background-color: rgba(15, 20, 50, 0.95); /* Slightly transparent dark background */
+    border-radius: 8px;
+    box-shadow: 0 0 30px var(--neon-blue);
+}
+
+.auth-form input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    background-color: #0f1432;
+    color: var(--text-color);
+    font-size: 1rem;
+    box-shadow: inset 0 0 5px var(--neon-blue);
+    outline: none;
+    transition: box-shadow 0.3s ease;
+}
+
+.auth-form input:focus {
+    box-shadow: 0 0 8px var(--neon-blue), inset 0 0 8px var(--neon-blue);
+}
+
+.auth-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--neon-blue);
+    color: var(--dark-blue);
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 10px var(--neon-blue);
+}
+
+.auth-form button:hover {
+    background-color: #00c9e3;
+    box-shadow: 0 0 15px var(--neon-blue);
+}
+
+.auth-form p {
+    text-align: center;
+    color: var(--neon-blue);
+    font-weight: bold;
+}
+
+.auth-form p:hover {
+    color: #00c9e3;
+}
+
+@keyframes neonPulse {
+    0%, 100% {
+        box-shadow: 0 0 15px var(--neon-blue);
+    }
+    50% {
+        box-shadow: 0 0 30px var(--neon-blue);
+    }
+}
+
+.auth-form button {
+    animation: neonPulse 1.5s infinite;
+}
+
+.entry {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../public/1704209847534 copy.jpeg') center/cover no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 6;
+}
+
+
+
+.entry h1 {
+    font-size: 3rem;
+    margin-bottom: 40px;
+    text-align: center;
+    font-family: 'Orbitron', sans-serif; /* Sci-fi style font */
+    color: #b9bac4;
+    text-shadow: 0 0 10px #a86ce4, 0 0 20px #716796;
+}
+
+/* Button Container Styling */
+.userbuttons {
+    display: flex;
+    gap: 30px; /* Space between buttons */
+    flex-direction: row;
+}
+
+/* Button Styling */
+.entry button {
+    position: relative;
+    width: 250px;
+    padding: 15px;
+    font-size: 1.2rem;
+    font-family: 'Orbitron', sans-serif;
+    color: #a1a7ca;
+    background: transparent;
+    border: 2px solid #d6d1df;
+    border-radius: 8px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: color 0.4s, box-shadow 0.4s;
+    box-shadow: 0 0 15px rgb(168, 108, 228), 0 0 30px rgba(0, 204, 255, 0.3);
+}
+
+/* Button Hover Effects */
+.entry button:hover {
+    color: #ffffff;
+    box-shadow: 0 0 20px rgba(0, 255, 204, 0.8), 0 0 40px rgba(0, 204, 255, 0.6);
+    background: rgba(0, 204, 255, 0.1);
+}
+
+.entry button:before, .entry button:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(0, 255, 204, 0.3), transparent);
+    transition: transform 0.5s;
+}
+
+.entry button:before {
+    top: 0;
+    left: -100%;
+    transform: skewX(45deg);
+}
+
+.entry button:after {
+    bottom: 0;
+    right: -100%;
+    transform: skewX(-45deg);
+}
+
+.entry button:hover:before {
+    transform: translateX(100%) skewX(45deg);
+}
+
+.entry button:hover:after {
+    transform: translateX(-100%) skewX(-45deg);
+}
+
+.entry button:active {
+    background: rgba(0, 204, 255, 0.2);
+}

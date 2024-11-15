@@ -1,0 +1,231 @@
+/* General Dashboard Styles */
+.dashboard {
+     font-family: 'Roboto', sans-serif;
+     background-color: rgba(255, 255, 255, 0.1); /* Transparent Background */
+     color: #f5f6fa;
+     text-align: center;
+     padding: 20px;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     min-height: 100vh;
+     animation: backgroundPulse 5s infinite alternate;
+    }
+    
+    @keyframes backgroundPulse {
+     0% { background-color: rgba(255, 255, 255, 0.1); }
+     100% { background-color: rgba(255, 255, 255, 0.1) }
+    }
+    
+    h1 {
+     font-size: 2.5rem;
+     color: #00fff5;
+     margin-bottom: 20px;
+     text-shadow: 0 0 8px #00fff5, 0 0 15px #00fff5;
+     animation: glowFade 2s infinite alternate;
+    }
+    
+    @keyframes glowFade {
+     0% { text-shadow: 0 0 8px #00fff5, 0 0 15px #00fff5; }
+     100% { text-shadow: 0 0 15px #00ffab, 0 0 25px #00fff5; }
+    }
+    
+    .completion-message {
+     font-size: 1.8rem;
+     color: #4affc0;
+     font-weight: bold;
+     margin-top: 20px;
+     text-shadow: 0 0 10px #4affc0, 0 0 20px #00ffab;
+     animation: floatUp 3s ease-in-out infinite;
+    }
+    
+    @keyframes floatUp {
+     0% { transform: translateY(0); }
+     50% { transform: translateY(-5px); }
+     100% { transform: translateY(0); }
+    }
+    
+    /* Map Container Styles */
+    .map-container {
+     margin: 20px 0;
+     position: relative;
+     width: 80%;
+     max-width: 800px;
+     background-color: rgba(34, 40, 49, 0.7); /* Transparent Background */
+     padding: 20px;
+     border-radius: 10px;
+     animation: slideIn 1.5s ease-out;
+     box-shadow: 0 0 15px rgba(0, 173, 181, 0.3), 0 0 30px rgba(0, 255, 255, 0.2);
+    }
+    
+    @keyframes slideIn {
+     0% { opacity: 0; transform: translateY(30px); }
+     100% { opacity: 1; transform: translateY(0); }
+    }
+    
+    .map-container rect {
+     transition: fill 0.3s ease, box-shadow 0.3s ease;
+     stroke: #00adb5;
+     stroke-width: 2;
+     fill: rgba(57, 62, 70, 0.6); /* Transparent Fill */
+     box-shadow: 0 0 8px rgba(0, 173, 181, 0.3);
+     animation: pulse 1.5s infinite alternate;
+    }
+    
+    @keyframes pulse {
+     0% { box-shadow: 0 0 8px #00adb5; }
+     100% { box-shadow: 0 0 20px #00fff5; }
+    }
+    
+    .map-container rect:hover {
+     fill: #00adb5;
+     box-shadow: 0 0 15px #00adb5, 0 0 25px #00fff5;
+     transform: scale(1.05);
+    }
+    
+    .map-container text {
+     font-size: 16px;
+     fill: #e0f7fa;
+     font-weight: bold;
+     pointer-events: none;
+     text-shadow: 0 0 8px rgba(224, 247, 250, 0.7);
+    }
+    
+    /* Completed Task Styles */
+    .map-container rect.completed {
+     fill: rgba(57, 62, 70, 0.3);
+     opacity: 0.3;
+     cursor: default;
+     box-shadow: none;
+    }
+    
+    /* Task Details Styles with Unique Colors */
+    .task-details {
+     background-color: rgba(34, 40, 49, 0.6); /* Default Background */
+     padding: 20px;
+     border-radius: 8px;
+     margin-bottom: 20px;
+     width: 80%;
+     max-width: 400px;
+     box-shadow: 0 0 10px #00adb5, 0 0 30px rgba(0, 173, 181, 0.3);
+     animation: popUp 0.8s ease;
+    }
+    
+    @keyframes popUp {
+     0% { opacity: 0; transform: scale(0.8); }
+     100% { opacity: 1; transform: scale(1); }
+    }
+    
+    /* Different Colors for Each Task Box */
+    .task-details:nth-child(1) {
+     background-color: rgba(0, 255, 255, 0.15); /* Light Cyan */
+     border: 1px solid #00adb5;
+    }
+    
+    .task-details:nth-child(2) {
+     background-color: rgba(255, 0, 127, 0.15); /* Light Pink */
+     border: 1px solid #ff007f;
+    }
+    
+    .task-details:nth-child(3) {
+     background-color: rgba(127, 255, 0, 0.15); /* Light Green */
+     border: 1px solid #7fff00;
+    }
+    
+    .task-details:nth-child(4) {
+     background-color: rgba(255, 165, 0, 0.15); /* Light Orange */
+     border: 1px solid #ffa500;
+    }
+    
+    .task-details:nth-child(5) {
+     background-color: rgba(255, 255, 0, 0.15); /* Light Yellow */
+     border: 1px solid #ffff00;
+    }
+    
+    .task-details:nth-child(6) {
+     background-color: rgba(0, 191, 255, 0.15); /* Light Blue */
+     border: 1px solid #00bfff;
+    }
+    
+    .task-details:nth-child(7) {
+     background-color: rgba(186, 85, 211, 0.15); /* Light Purple */
+     border: 1px solid #ba55d3;
+    }
+    
+    .task-details h2 {
+     font-size: 1.5rem;
+     color: #00fff5;
+     margin-bottom: 10px;
+     text-shadow: 0 0 8px #00adb5, 0 0 15px #00fff5;
+     animation: textGlow 3s ease-in-out infinite;
+    }
+    
+    @keyframes textGlow {
+     0% { color: #00fff5; }
+     50% { color: #4affc0; }
+     100% { color: #00fff5; }
+    }
+    
+    .task-details p {
+     font-size: 1rem;
+     color: #dcdde1;
+     margin: 5px 0;
+     text-shadow: 0 0 5px rgba(220, 221, 225, 0.4);
+     animation: fadeIn 1s ease;
+    }
+    
+    @keyframes fadeIn {
+     0% { opacity: 0; }
+     100% { opacity: 1; }
+    }
+    
+    /* User Points Styles */
+    .user-points {
+     font-size: 1.2rem;
+     color: #4affc0;
+     margin-top: 10px;
+     text-shadow: 0 0 8px #4affc0, 0 0 15px #00ffab;
+     animation: floatUp 3s ease-in-out infinite;
+    }
+    
+    /* Leaderboard Styles */
+    .leaderboard-container {
+     background-color: rgba(34, 40, 49, 0.7); /* Transparent Background */
+     padding: 20px;
+     border-radius: 8px;
+     width: 80%;
+     max-width: 400px;
+     margin-bottom: 20px;
+     box-shadow: 0 0 10px #00adb5, 0 0 30px rgba(0, 173, 181, 0.3);
+     animation: leaderboardSlide 1s ease-in-out;
+    }
+    
+    @keyframes leaderboardSlide {
+     0% { transform: translateX(-50px); opacity: 0; }
+     100% { transform: translateX(0); opacity: 1; }
+    }
+    
+    .leaderboard-container h3 {
+     font-size: 1.5rem;
+     color: #9c88ff;
+     margin-bottom: 10px;
+     text-shadow: 0 0 8px #9c88ff, 0 0 15px #e1b3ff;
+     animation: glowFade 2s infinite alternate;
+    }
+    
+    .leaderboard-container ul {
+     list-style: none;
+     padding: 0;
+     margin: 0;
+    }
+    
+    .leaderboard-container li {
+     background-color: rgba(31, 64, 104, 0.6); /* Transparent Background */
+     border: 1px solid #3742fa;
+     border-radius: 5px;
+     padding: 10px;
+     margin: 5px 0;
+     color: #e1e1e1;
+     box-shadow: 0 0 5px rgba(31, 64, 104, 0.3);
+    }
+    

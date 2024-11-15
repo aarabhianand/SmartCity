@@ -1,0 +1,148 @@
+/* Main Profile Container */
+.profile-container {
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  background-color: transparent;
+  flex-wrap: wrap; /* Allows content to wrap for smaller screens */
+  backdrop-filter: blur(6px);
+}
+
+/* Profile Modal */
+.profile-modal {
+  background-color: rgba(50, 60, 85, 0.9);
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 700px; /* Adjusted width for better layout */
+  margin: 20px;
+  overflow: hidden;
+}
+
+/* Header Section */
+.profile-modal h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #d6d1df;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 0px 4px 10px rgba(122, 82, 217, 0.6);
+}
+
+/* Profile Information Styling */
+.profile-info {
+  display: block;
+  margin-bottom: 30px;
+}
+
+.profile-info div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.profile-info p {
+  font-size: 1rem;
+  color: #e0e0e0;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.profile-info .editable {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.profile-info .editable p {
+  margin-right: 15px;
+  color: #bdc3c7;
+}
+
+.profile-info .editable i {
+  font-size: 1.2rem;
+  color: #8e44ad;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.profile-info .editable i:hover {
+  color: #5e3370;
+}
+
+/* Profile Editing Section */
+.profile-edit {
+  margin-top: 40px;
+}
+
+.profile-edit h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #e0e0e0;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+/* Input Fields for Editing */
+.profile-detail {
+  margin-bottom: 25px;
+}
+
+.profile-detail label {
+  font-size: 1rem;
+  color: #bdc3c7;
+  margin-bottom: 8px;
+  display: block;
+  font-weight: bold;
+}
+
+.profile-detail input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #34495e;
+  border-radius: 10px;
+  font-size: 1rem;
+  color: #2c3e50;
+  background-color: #f8f9fa;
+  transition: all 0.3s ease;
+}
+
+.profile-detail input:focus {
+  border-color: #8e44ad;
+  outline: none;
+}
+
+/* Logout Button */
+.logout-btn {
+  padding: 14px 0;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  background-color: #a1a7a3;
+  color: #fff;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 30px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.logout-btn:hover {
+  background-color: #a1a7a3;
+  transform: scale(1.05);
+  box-shadow: 0 0 35px rgba(96, 141, 195, 0.8),
+              0 0 45px rgba(96, 141, 195, 0.7);
+}
+
+/* Loading Spinner */
+.loading {
+  text-align: center;
+  font-size: 1rem;
+  color: #bdc3c7;
+}

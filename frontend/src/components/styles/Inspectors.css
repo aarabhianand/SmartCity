@@ -1,0 +1,136 @@
+body {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../../public/1704209847534 copy.jpeg")
+    center/cover no-repeat;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #fff;
+}
+
+/* Container for the entire inspectors section */
+.inspector-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Title styling */
+.title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #d6d1d4;
+    text-shadow: 0 0 10px #a060c3, 0 0 20px #608dc3;
+}
+
+/* Search bar container */
+.search-container {
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 20px;
+}
+
+.search-bar {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    color: #fff;
+    background-color: rgb(255,255,255,0.2) !important;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease;
+}
+
+.search-bar:focus {
+    box-shadow: 0 0 10px #608dc3, 0 0 20px #608dc3;
+}
+
+/* Add buttons container - this is where both buttons are aligned horizontally */
+.add-buttons-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between the buttons */
+    margin-bottom: 20px;
+}
+
+/* Add inspector button styling */
+.add-inspector-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: transparent;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.add-inspector-btn:hover {
+    background-color: transparent;
+    box-shadow: 0 0 10px #608dc3, 0 0 20px #608dc3;
+}
+
+/* Add credentials button styling */
+.add-credentials-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: transparent;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.add-credentials-btn:hover {
+    background-color: transparent;
+    box-shadow: 0 0 10px #608dc3, 0 0 20px #608dc3;
+}
+
+/* Inspector list container */
+.inspector-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+}
+
+/* Individual inspector box */
+.inspector-box {
+    background-color: transparent;
+    color: #333;
+    border-radius: 10px;
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 10px #a060c3, 0 0 20px #608dc3;
+}
+
+.inspector-box h2 {
+    font-size: 1.5rem;
+    margin: 0 0 10px;
+    color: #d6d1df;
+    text-shadow: 0 0 10px #a060c3, 0 0 20px #a060c3;
+}
+
+.inspector-box p {
+    margin: 0;
+    font-size: 1rem;
+    color: #d6d1df;
+}
+
+.inspector-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px #a060c3, 0 0 20px #a060c3;
+}
